@@ -1,0 +1,116 @@
+name:                data-format-wad
+version:             0.0.0.1
+github:              "adamflott/data-format-wad"
+license:             BSD3
+author:              "Adam Flott"
+maintainer:          "adam@adamflott.com"
+copyright:           "2020"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            WAD (Doom, Heretic, Hexen, etc) Builder (Types, API)
+category:            Game
+
+description:         Please see the README on GitHub at <https://github.com/adamflott/wad#readme>
+
+ghc-options:
+  - -Wall
+  - -O
+  - -fwarn-unused-imports
+  - -fhide-source-paths
+  - -Widentities
+  - -Wincomplete-uni-patterns
+  - -Wincomplete-record-updates
+  - -Wredundant-constraints
+  - -Wpartial-fields
+  - -fwrite-ide-info
+  - -hiedir=.hie
+  - -Wmissing-deriving-strategies
+  - -Wmissing-export-lists
+  - -Wunused-packages
+#  - -Werror
+
+default-extensions:
+  - BangPatterns
+  - BinaryLiterals
+  - BlockArguments
+  - ConstraintKinds
+  - DataKinds
+  - DefaultSignatures
+  - DeriveDataTypeable
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - DerivingStrategies
+  - DerivingVia
+  - EmptyCase
+  - EmptyDataDecls
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTSyntax
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - MultiParamTypeClasses
+  - MultiWayIf
+  - NoMonomorphismRestriction
+  - NoImplicitPrelude
+  - NumDecimals
+  - NumericUnderscores
+  - OverloadedStrings
+  - ParallelListComp
+  - PatternGuards
+  - PatternSynonyms
+  - QuasiQuotes
+  - RankNTypes
+  - RecordWildCards
+  - RecursiveDo
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - StaticPointers
+  - TemplateHaskell
+  - TypeApplications
+  - TypeFamilies
+  - TypeFamilyDependencies
+  - TypeInType
+  - TypeOperators
+  - TypeSynonymInstances
+  - UnicodeSyntax
+  - ViewPatterns
+
+dependencies:
+- base >= 4.7 && < 5
+- relude >= 0.7.0 && <= 0.8.0
+
+
+library:
+  source-dirs: src
+  dependencies:
+    - bytestring >= 0.10.10.0 && <= 0.11.0.0
+
+executables:
+  wad-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - data-format-wad
+
+tests:
+  wad-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - data-format-wad
