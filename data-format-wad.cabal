@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 24f7264c41c40d6b7238edbc3f90a473cc3d6d52bb3ff68c64fcf7683ede1b2d
+-- hash: 8ead929a67dd5c68ac47b3cf18ecce85a0e4a99193bdd92dc2af8d05765697f7
 
 name:           data-format-wad
 version:        0.0.0.1
@@ -40,23 +40,6 @@ library
       base >=4.7 && <5
     , bytestring >=0.10.10.0 && <=0.11.0.0
     , data-format-udmf
-    , prettyprinter >=1.7.0 && <=1.8.0
-    , relude >=0.7.0 && <=0.8.0
-    , tasty >=1.2.3 && <=1.3.0
-  default-language: Haskell2010
-
-executable wad-exe
-  main-is: Main.hs
-  other-modules:
-      Paths_data_format_wad
-  hs-source-dirs:
-      app
-  default-extensions: BangPatterns BinaryLiterals BlockArguments ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies DerivingVia EmptyCase EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GADTSyntax GADTs GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses MultiWayIf NoMonomorphismRestriction NoImplicitPrelude NumDecimals NumericUnderscores OverloadedStrings ParallelListComp PatternGuards PatternSynonyms QuasiQuotes RankNTypes RecordWildCards RecursiveDo ScopedTypeVariables StandaloneDeriving StaticPointers TemplateHaskell TypeApplications TypeFamilies TypeFamilyDependencies TypeInType TypeOperators TypeSynonymInstances UnicodeSyntax ViewPatterns
-  ghc-options: -Wall -O -fwarn-unused-imports -fhide-source-paths -Widentities -Wincomplete-uni-patterns -Wincomplete-record-updates -Wredundant-constraints -Wpartial-fields -fwrite-ide-info -hiedir=.hie -Wmissing-deriving-strategies -Wmissing-export-lists -Wunused-packages -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , data-format-udmf
-    , data-format-wad
     , prettyprinter >=1.7.0 && <=1.8.0
     , relude >=0.7.0 && <=0.8.0
     , tasty >=1.2.3 && <=1.3.0
