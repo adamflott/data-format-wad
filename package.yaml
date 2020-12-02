@@ -86,7 +86,9 @@ default-extensions:
 dependencies:
 - base >= 4.7 && < 5
 - relude >= 0.7.0 && <= 0.8.0
-
+- prettyprinter >= 1.7.0 && <= 1.8.0
+- tasty >= 1.2.3 && <= 1.3.0
+- data-format-udmf
 
 library:
   source-dirs: src
