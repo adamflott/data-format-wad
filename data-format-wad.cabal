@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8ead929a67dd5c68ac47b3cf18ecce85a0e4a99193bdd92dc2af8d05765697f7
+-- hash: d5e4c24bbdbbc904ed8ec1a701426f6aced7ab90a3fcd3450145fceeafcf9de4
 
 name:           data-format-wad
 version:        0.0.0.1
@@ -45,7 +45,7 @@ library
     , tasty >=1.2.3 && <=1.3.0
   default-language: Haskell2010
 
-test-suite wad-test
+test-suite data-format-wad-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
